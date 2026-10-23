@@ -1,162 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horários Fictícios</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 2rem;
-            background: #f5f7fa;
-            color: #222;
-        }
-        table {
-            width: 100%;
-            max-width: 900px;
-            border-collapse: collapse;
-            background: white;
-        }
-        caption {
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        th, td {
-            border: 1px solid #c8d0d8;
-            padding: 0.8rem;
-            text-align: left;
-            vertical-align: top;
-        }
-        th {
-            background: #e4ebf2;
-        }
-        .materia {
-            font-weight: bold;
-        }
-        .horario {
-            display: block;
-            color: #555;
-            margin-top: 0.25rem;
-        }
-        .celula-vazia {
-            background: #fff8df;
-        }
-        .observacao {
-            margin-top: 1rem;
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>horario_sol.html — estrutura falsa no formato do SOL</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; background: #f5f7fa; color: #222; }
+    .container2 { max-width: 900px; }
+    .disciplina { background: #fff; border: 1px solid #c8d0d8; padding: 1rem; margin-bottom: 1rem; }
+    .disciplina > h1 { font-size: 1.1rem; margin: 0 0 .25rem; }
+    .disciplina > h4 { margin: 0 0 .75rem; color: #555; font-weight: normal; }
+    .horario { border-top: 1px dashed #c8d0d8; padding-top: .5rem; margin-top: .5rem; }
+    .horario > h1 { font-size: 1rem; margin: 0; }
+    .horario > h3 { margin: .25rem 0; font-size: .95rem; }
+    .horario > h4 { margin: 0; font-size: .85rem; color: #444; font-weight: normal; }
+    .horario-borda { border-top: 2px solid #99a; } /* só estilo; NÃO usar como seletor de aula */
+  </style>
 </head>
 <body>
-    <h1>Meu Horário — Dados Fictícios</h1>
+  <div class="container">
+    <div class="container2">
+      <div class="servicos">
 
-    <table class="grade-horaria">
-        <caption>Segunda a sexta-feira — 3 aulas por dia</caption>
-        <thead>
-            <tr>
-                <th scope="col">Dia</th>
-                <th scope="col">1ª aula</th>
-                <th scope="col">2ª aula</th>
-                <th scope="col">3ª aula</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="dia-segunda">
-                <th scope="row">Segunda-feira</th>
-                <td class="aula">
-                    <span class="materia">Fundamentos de Computação</span>
-                    <span class="horario">19:00–19:50</span>
-                    <span class="sala">Sala 101</span>
-                </td>
-                <td class="aula">
-                    <span class="materia">Lógica de Programação</span>
-                    <span class="horario">19:50–20:40</span>
-                    <span class="sala">Sala 101</span>
-                </td>
-                <td class="aula">
-                    <span class="materia">Matemática Discreta</span>
-                    <span class="horario">20:50–21:40</span>
-                    <span class="sala">Sala 101</span>
-                </td>
-            </tr>
-            <tr class="dia-terca">
-                <th scope="row">Terça-feira</th>
-                <td class="aula">
-                    <span class="materia">Engenharia de Software</span>
-                    <span class="horario">19:00–19:50</span>
-                    <span class="sala">Sala 101</span>
-                </td>
-                <td class="aula">
-                    <span class="materia">Banco de Dados</span>
-                    <span class="horario">19:50–20:40</span>
-                    <span class="sala">Sala 101</span>
-                </td>
-                <td class="aula">
-                    <span class="materia">Programação em C</span>
-                    <span class="horario">20:50–21:40</span>
-                    <span class="sala">Sala 101</span>
-                </td>
-            </tr>
-            <tr class="dia-quarta">
-                <th scope="row">Quarta-feira</th>
-                <td class="aula">
-                    <span class="materia">Matemática Discreta</span>
-                    <span class="horario">19:00–19:50</span>
-                    <span class="sala">Sala 101</span>
-                </td>
-                <td class="aula celula-vazia">
-                    <!-- Armadilha: célula intencionalmente vazia, sem matéria ou horário. -->
-                </td>
-                <td class="aula">
-                    <span class="materia">Fundamentos de Computação</span>
-                    <span class="horario">20:50–21:40</span>
-                    <span class="sala">Sala 101</span>
-                </td>
-            </tr>
-            <tr class="dia-quinta">
-                <th scope="row">Quinta-feira</th>
-                <td class="aula">
-                    <span class="materia">Banco de Dados</span>
-                    <span class="horario">19:00–19:50</span>
-                    <span class="sala">Sala 101</span>
-                </td>
-                <td class="aula">
-                    <span class="materia">Programação em C</span>
-                    <span class="horario">19:50–20:40</span>
-                    <span class="sala">Sala 101</span>
-                </td>
-                <td class="aula">
-                    <span class="materia">Engenharia de Software</span>
-                    <span class="horario">20:50–21:40</span>
-                    <span class="sala">Sala 101</span>
-                </td>
-            </tr>
-            <tr class="dia-sexta">
-                <th scope="row">Sexta-feira</th>
-                <td class="aula">
-                    <span class="materia">Lógica de Programação</span>
-                    <span class="horario">19:00–19:50</span>
-                    <span class="sala">Sala 101</span>
-                </td>
-                <td class="aula aula-dupla">
-                    <!-- Armadilha: uma matéria aparece com dois horários. -->
-                    <span class="materia">Projeto Integrador</span>
-                    <span class="horario">19:50–20:20</span>
-                    <span class="horario">20:20–20:40</span>
-                    <span class="sala">Sala 101</span>
-                </td>
-                <td class="aula">
-                    <span class="materia">Matemática Discreta</span>
-                    <span class="horario">20:50–21:40</span>
-                    <span class="sala">Sala 101</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        <!-- ===== DISCIPLINA 1 ===== -->
+        <div class="disciplina">
+          <h1>INTRODUÇÃO À PROGRAMAÇÃO</h1>
+          <h4>CMP0001 (T01)</h4>
 
-    <p class="observacao">
-        Exercício de teste: todos os nomes e horários desta página são fictícios.
-    </p>
+          <div class="horario ">
+            <h1>SEG</h1>
+            <h3>20:30 às 22:00</h3>
+            <h4>Local: CAMPUS I A-01 BL-A SL-101</h4>
+            <h4>(PRELECAO)</h4>
+          </div>
+
+          <div class="horario horario-borda">
+            <h1>QUI</h1>
+            <h3>20:30 às 22:00</h3>
+            <h4>Local: CAMPUS I A-01 BL-A SL-101</h4>
+            <h4>(PRELECAO)</h4>
+          </div>
+        </div>
+
+        <!-- ===== DISCIPLINA 2 ===== -->
+        <div class="disciplina">
+          <h1>ESTRUTURAS DE DADOS</h1>
+          <h4>CMP0002 (T02)</h4>
+
+          <!-- mesmo dia (QUA) duas vezes, igual ao caso real de SISTEMAS DIGITAIS -->
+          <div class="horario ">
+            <h1>QUA</h1>
+            <h3>18:45 às 20:15</h3>
+            <h4>Local: CAMPUS I A-01 BL-B SL-202</h4>
+            <h4>(PRELECAO)</h4>
+          </div>
+
+          <div class="horario horario-borda">
+            <h1>QUA</h1>
+            <h3>20:30 às 22:00</h3>
+            <h4>Local: CAMPUS I A-01 BL-C SL-303</h4>
+            <h4>(LABORATORIO)</h4>
+          </div>
+        </div>
+
+        <!-- ===== DISCIPLINA 3 ===== -->
+        <div class="disciplina">
+          <h1>BANCO DE DADOS</h1>
+          <h4>CMP0003 (T03)</h4>
+
+          <div class="horario ">
+            <h1>TER</h1>
+            <h3>18:45 às 20:15</h3>
+            <h4>Local: CAMPUS I A-02 BL-D SL-404</h4>
+            <h4>(PRELECAO)</h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </body>
 </html>
