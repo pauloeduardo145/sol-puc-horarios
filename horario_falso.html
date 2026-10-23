@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horários Fictícios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            background: #f5f7fa;
+            color: #222;
+        }
+        table {
+            width: 100%;
+            max-width: 900px;
+            border-collapse: collapse;
+            background: white;
+        }
+        caption {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        th, td {
+            border: 1px solid #c8d0d8;
+            padding: 0.8rem;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background: #e4ebf2;
+        }
+        .materia {
+            font-weight: bold;
+        }
+        .horario {
+            display: block;
+            color: #555;
+            margin-top: 0.25rem;
+        }
+        .celula-vazia {
+            background: #fff8df;
+        }
+        .observacao {
+            margin-top: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu Horário — Dados Fictícios</h1>
+
+    <table class="grade-horaria">
+        <caption>Segunda a sexta-feira — 3 aulas por dia</caption>
+        <thead>
+            <tr>
+                <th scope="col">Dia</th>
+                <th scope="col">1ª aula</th>
+                <th scope="col">2ª aula</th>
+                <th scope="col">3ª aula</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="dia-segunda">
+                <th scope="row">Segunda-feira</th>
+                <td class="aula">
+                    <span class="materia">Fundamentos de Computação</span>
+                    <span class="horario">19:00–19:50</span>
+                    <span class="sala">Sala 101</span>
+                </td>
+                <td class="aula">
+                    <span class="materia">Lógica de Programação</span>
+                    <span class="horario">19:50–20:40</span>
+                    <span class="sala">Sala 101</span>
+                </td>
+                <td class="aula">
+                    <span class="materia">Matemática Discreta</span>
+                    <span class="horario">20:50–21:40</span>
+                    <span class="sala">Sala 101</span>
+                </td>
+            </tr>
+            <tr class="dia-terca">
+                <th scope="row">Terça-feira</th>
+                <td class="aula">
+                    <span class="materia">Engenharia de Software</span>
+                    <span class="horario">19:00–19:50</span>
+                    <span class="sala">Sala 101</span>
+                </td>
+                <td class="aula">
+                    <span class="materia">Banco de Dados</span>
+                    <span class="horario">19:50–20:40</span>
+                    <span class="sala">Sala 101</span>
+                </td>
+                <td class="aula">
+                    <span class="materia">Programação em C</span>
+                    <span class="horario">20:50–21:40</span>
+                    <span class="sala">Sala 101</span>
+                </td>
+            </tr>
+            <tr class="dia-quarta">
+                <th scope="row">Quarta-feira</th>
+                <td class="aula">
+                    <span class="materia">Matemática Discreta</span>
+                    <span class="horario">19:00–19:50</span>
+                    <span class="sala">Sala 101</span>
+                </td>
+                <td class="aula celula-vazia">
+                    <!-- Armadilha: célula intencionalmente vazia, sem matéria ou horário. -->
+                </td>
+                <td class="aula">
+                    <span class="materia">Fundamentos de Computação</span>
+                    <span class="horario">20:50–21:40</span>
+                    <span class="sala">Sala 101</span>
+                </td>
+            </tr>
+            <tr class="dia-quinta">
+                <th scope="row">Quinta-feira</th>
+                <td class="aula">
+                    <span class="materia">Banco de Dados</span>
+                    <span class="horario">19:00–19:50</span>
+                    <span class="sala">Sala 101</span>
+                </td>
+                <td class="aula">
+                    <span class="materia">Programação em C</span>
+                    <span class="horario">19:50–20:40</span>
+                    <span class="sala">Sala 101</span>
+                </td>
+                <td class="aula">
+                    <span class="materia">Engenharia de Software</span>
+                    <span class="horario">20:50–21:40</span>
+                    <span class="sala">Sala 101</span>
+                </td>
+            </tr>
+            <tr class="dia-sexta">
+                <th scope="row">Sexta-feira</th>
+                <td class="aula">
+                    <span class="materia">Lógica de Programação</span>
+                    <span class="horario">19:00–19:50</span>
+                    <span class="sala">Sala 101</span>
+                </td>
+                <td class="aula aula-dupla">
+                    <!-- Armadilha: uma matéria aparece com dois horários. -->
+                    <span class="materia">Projeto Integrador</span>
+                    <span class="horario">19:50–20:20</span>
+                    <span class="horario">20:20–20:40</span>
+                    <span class="sala">Sala 101</span>
+                </td>
+                <td class="aula">
+                    <span class="materia">Matemática Discreta</span>
+                    <span class="horario">20:50–21:40</span>
+                    <span class="sala">Sala 101</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="observacao">
+        Exercício de teste: todos os nomes e horários desta página são fictícios.
+    </p>
+</body>
+</html>
